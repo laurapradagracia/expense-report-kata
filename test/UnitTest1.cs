@@ -1,4 +1,4 @@
-namespace ExpenseReport.Test;
+namespace ExpenseReports.Test;
 
 public class UnitTest1
 {

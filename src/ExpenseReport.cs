@@ -1,4 +1,4 @@
-﻿namespace ExpenseReport
+﻿namespace ExpenseReports
 {
     public enum ExpenseType
     {

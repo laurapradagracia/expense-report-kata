@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseReports.Test", "test\ExpenseReports.Test.csproj", "{F4038F91-C804-4D04-8CDE-FBB1595CC3DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseReports", "src\ExpenseReports.csproj", "{15C34182-4E17-4389-9BAF-73F8CEB92B8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4038F91-C804-4D04-8CDE-FBB1595CC3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4038F91-C804-4D04-8CDE-FBB1595CC3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4038F91-C804-4D04-8CDE-FBB1595CC3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4038F91-C804-4D04-8CDE-FBB1595CC3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C34182-4E17-4389-9BAF-73F8CEB92B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C34182-4E17-4389-9BAF-73F8CEB92B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C34182-4E17-4389-9BAF-73F8CEB92B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C34182-4E17-4389-9BAF-73F8CEB92B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

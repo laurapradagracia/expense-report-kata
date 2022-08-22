@@ -1,3 +1,3 @@
 # expense-report-kata
 
-This is a dotnet version of [expernse report kata](https://github.com/christianhujer/expensereport)
+This is a dotnet version of [expense report kata](https://github.com/christianhujer/expensereport)

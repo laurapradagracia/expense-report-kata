@@ -15,10 +15,15 @@
     {
         public void PrintReport(List<Expense> expenses)
         {
+            PrintReport(expenses, DateTime.Now);
+        }
+
+        public void PrintReport(List<Expense> expenses, DateTime dateTime)
+        {
             int total = 0;
             int mealExpenses = 0;
 
-            Console.WriteLine("Expenses " + DateTime.Now);
+            Console.WriteLine("Expenses " + dateTime);
 
             foreach (Expense expense in expenses)
             {

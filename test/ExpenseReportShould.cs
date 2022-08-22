@@ -7,8 +7,11 @@ public class ExpenseReportShould
     {
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
+
+        var date = new DateTime(2022, 08, 01);
+        var expectedDate = date.ToString();
         var report = new ExpenseReport();
-        report.PrintReport(new List<Expense>());
-        Assert.Equal("Expenses 22/08/2022 12:23:39\r\nMeal expenses: 0\r\nTotal expenses: 0", stringWriter.ToString());
+        report.PrintReport(new List<Expense>(), date);
+        Assert.Equal($"Expenses {expectedDate}\r\nMeal expenses: 0\r\nTotal expenses: 0\r\n", stringWriter.ToString());
     }
 }

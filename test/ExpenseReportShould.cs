@@ -13,9 +13,9 @@ public class ExpenseReportShould
     [Fact]
     public void Print_Empty_List()
     {
-        var expectedDate = _currentDate.ToString();
+        var expectedOutput = $"Expenses {_currentDate}\r\nMeal expenses: 0\r\nTotal expenses: 0\r\n";
         _expenseReport.PrintReport(new List<Expense>(), _currentDate);
-        Assert.Equal($"Expenses {expectedDate}\r\nMeal expenses: 0\r\nTotal expenses: 0\r\n", _stringWriter.ToString());
+        Assert.Equal(expectedOutput, _stringWriter.ToString());
     }
 
     [Theory]
@@ -23,14 +23,14 @@ public class ExpenseReportShould
     [InlineData("BREAKFAST", 1001, "Breakfast")]
     public void Print_Non_Accepted_Meal_Expensese(string expenseType, int cost, string expectedExpense)
     {
-        var expectedDate = _currentDate.ToString();
+        var expectedOutput = $"Expenses {_currentDate}\r\n{expectedExpense}\t{cost}\tX\r\nMeal expenses: {cost}\r\nTotal expenses: {cost}\r\n";
         var expenses = new List<Expense>()
         {
             new Expense{ amount = cost , type = Enum.Parse<ExpenseType>(expenseType)}
         };
 
         _expenseReport.PrintReport(expenses, _currentDate);
-        Assert.Equal($"Expenses {expectedDate}\r\n{expectedExpense}\t{cost}\tX\r\nMeal expenses: {cost}\r\nTotal expenses: {cost}\r\n", _stringWriter.ToString());
+        Assert.Equal(expectedOutput, _stringWriter.ToString());
     }
 
     [Theory]
@@ -39,14 +39,14 @@ public class ExpenseReportShould
     [InlineData("CAR_RENTAL", 10000, "Car Rental", 0)]
     public void Print_Accepted_Expensese(string expenseType, int cost, string expectedExpense, int exptectedMealExpense)
     {
-        var expectedDate = _currentDate.ToString();
+        var expectedOutput = $"Expenses {_currentDate}\r\n{expectedExpense}\t{cost}\t \r\nMeal expenses: {exptectedMealExpense}\r\nTotal expenses: {cost}\r\n";
         var expenses = new List<Expense>()
         {
             new Expense{ amount = cost , type = Enum.Parse<ExpenseType>(expenseType)}
         };
 
         _expenseReport.PrintReport(expenses, _currentDate);
-        Assert.Equal($"Expenses {expectedDate}\r\n{expectedExpense}\t{cost}\t \r\nMeal expenses: {exptectedMealExpense}\r\nTotal expenses: {cost}\r\n", _stringWriter.ToString());
+        Assert.Equal(expectedOutput, _stringWriter.ToString());
     }
 
     [Fact]

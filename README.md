@@ -22,7 +22,7 @@ Currently there is no test whatsoever, therefore you are expected to cover the f
 - One expense over limit
 - All the possible permutations in one list.
 
-We will not use any acceptance test framework on this instance. You will write all the tests and scenarios.
+We will not use any approval test framework on this instance. You will write all the tests and scenarios.
 
 
 

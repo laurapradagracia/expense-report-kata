@@ -14,7 +14,7 @@ You need to state your expenses like
 
 DINNER 1000
 
-## Acceptance test
+## Automated test
 
 Currently there is no test whatsoever, therefore you are expected to cover the following scenarios:
 - No expense at all

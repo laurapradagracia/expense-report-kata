@@ -1,7 +1,10 @@
 ﻿using ExpenseReports;
 
+var worker = new Worker();
+Console.WriteLine(worker.PrintFirstLine());
+
 var expenses = new List<Expense>();
-Console.WriteLine("Insert expense");
+
 while(TryGetExpense(Console.ReadLine(), out Expense? expense))
 {
     if(expense != null)
